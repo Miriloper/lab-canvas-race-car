@@ -25,10 +25,8 @@
       this.canvasDOMEl = document.getElementById(id)
       this.ctx = this.canvasDOMEl.getContext("2d")
       this.canvasDOMEl.setAttribute("height", this.h);
-      this.canvasDOMEl.setAttribute("width", this.w)
-      this.reset = () => {
-      this.counter = 0;
-     }
+      this.canvasDOMEl.setAttribute("width", this.w);
+   
      
      this.intervalId = setInterval(() => {
         this.counter++;
