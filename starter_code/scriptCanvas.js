@@ -22,16 +22,19 @@
 
    init = (id) => {
      
-     this.canvasDOMEl = document.getElementById(id)
-     this.ctx = this.canvasDOMEl.getContext("2d")
-     this.canvasDOMEl.setAttribute("height", this.h);
-     this.canvasDOMEl.setAttribute("width", this.w)
+      this.canvasDOMEl = document.getElementById(id)
+      this.ctx = this.canvasDOMEl.getContext("2d")
+      this.canvasDOMEl.setAttribute("height", this.h);
+      this.canvasDOMEl.setAttribute("width", this.w)
+      this.reset = () => {
+      this.counter = 0;
+     }
      
      this.intervalId = setInterval(() => {
-     this.counter++;
-     this.clearRoad();
-     this.drawAll();
-     this.carMovement()
+        this.counter++;
+        this.clearRoad();
+        this.drawAll();
+        this.carMovement()
 
 
      }, 1000/60)
